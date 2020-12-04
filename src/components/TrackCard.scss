@@ -1,0 +1,105 @@
+@import '../styles/config';
+@import '../styles/utilities';
+
+.TrackCard {
+	display: block;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0;
+
+	&-Number {
+		padding-bottom: 1rem;
+
+		h1 {
+			font-size: 1.75rem;
+		}
+	}
+
+	&-Media {
+		iframe {
+			display: inline-block;
+		}
+	}
+
+	&-Body {
+		display: block;
+		grid-template-rows: repeat(5, 1fr);
+		align-items: center;
+
+		.TrackCard-Title {
+			padding-bottom: 1.5rem;
+		}
+
+		.TrackCard-Features {
+			.progress {
+				overflow: hidden;
+				width: 60%;
+				margin: auto;
+				height: 0.6rem;
+				background: #555;
+				border-radius: 5px;
+				margin-bottom: 0.6rem;
+				animation-name: flash;
+				animation-duration: 1.5s;
+				animation-timing-function: ease;
+
+				div {
+					height: 100%;
+					color: #fff;
+					text-align: center;
+					background: rgba($primary-color, $alpha: 0.8);
+				}
+			}
+		}
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: 1;
+	}
+
+	25% {
+		opacity: 0.1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 0.1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 500px) {
+	.TrackCard {
+		padding: 0.8rem 0;
+
+		&-Number {
+			padding-bottom: 0;
+		}
+
+		&-Media {
+			iframe {
+				display: block;
+				margin: auto;
+				width: 280px;
+				height: 360px;
+			}
+		}
+		&-Body {
+			.TrackCard-Title {
+				padding-bottom: 1rem;
+
+				h1 {
+					font-size: 1.75rem;
+				}
+			}
+		}
+	}
+}

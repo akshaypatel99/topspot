@@ -1,0 +1,43 @@
+@import 'styles/config';
+@import 'styles/utilities';
+
+// Fonts
+@font-face {
+	font-family: 'Proxima Nova';
+	src: local('Proxima Nova'),
+		url(./fonts/ProximaNovaRegular.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Proxima Nova Bold';
+	src: local('Proxima Nova Bold'),
+		url(./fonts/ProximaNovaBold.otf) format('opentype');
+}
+
+// General Styles
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Proxima Nova Bold', sans-serif;
+	line-height: 1.6;
+	color: #fff;
+	background: $dark-color;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.App {
+	text-align: center;
+	height: 100vh;
+	position: relative;
+}

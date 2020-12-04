@@ -1,0 +1,96 @@
+@import '../styles/config';
+@import '../styles/utilities';
+
+.Landing {
+	display: grid;
+	place-items: center;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1.5fr 1fr 1fr 1fr;
+	text-align: center;
+	margin: auto;
+	height: 100vh;
+	transition: all 0.5s;
+
+	span {
+		color: $primary-color;
+	}
+
+	&-AppName {
+		h1 {
+			font-size: 6rem;
+
+			span {
+				color: $primary-color;
+			}
+		}
+	}
+
+	&-Logo {
+		display: inline-block;
+		justify-content: center;
+		align-items: center;
+
+		h3 {
+			font-size: 1.1rem;
+		}
+		.Logo img {
+			width: 20%;
+		}
+	}
+
+	&-Info {
+		color: rgba($color: #fff, $alpha: 0.9);
+
+		.Modal-main {
+			display: block;
+			align-items: center;
+
+			h1 {
+				padding: 2rem 0;
+			}
+
+			p {
+				padding: 1.5rem 0;
+
+				&:last-of-type {
+					font-size: 0.8rem;
+				}
+			}
+
+			a span {
+				color: $spotify-color;
+
+				&:hover {
+					color: $tertiary-color;
+					transition: 0.5s;
+				}
+			}
+		}
+	}
+
+	&-Link {
+		justify-content: center;
+		align-items: center;
+		a {
+			margin: 0 5rem;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.Landing {
+		grid-template-rows: 1.5fr 1fr 1fr 1fr;
+
+		&-AppName {
+			h1 {
+				font-size: 4rem;
+			}
+		}
+
+		&-Link {
+			a {
+				margin: 0;
+			}
+		}
+	}
+}

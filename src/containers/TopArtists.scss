@@ -1,0 +1,164 @@
+@import '../styles/config';
+@import '../styles/utilities';
+
+.TopArtists {
+	padding-top: 4rem;
+
+	&-Header {
+		padding: 2rem 0;
+
+		h1 {
+			font-size: 3rem;
+
+			span {
+				color: $primary-color;
+			}
+		}
+	}
+
+	&-Menu {
+		padding: 2rem;
+		position: relative;
+
+		ul {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-content: center;
+			padding-bottom: 1rem;
+
+			li {
+				font-size: 1.5rem;
+				border-bottom: 3px transparent solid;
+				padding-bottom: 0.5rem;
+				transition: border-color 0.5s;
+				cursor: pointer;
+
+				&:hover {
+					border-color: $primary-color;
+				}
+
+				&.current {
+					border-color: $spotify-color;
+				}
+			}
+		}
+
+		div {
+			padding-top: 1rem;
+		}
+	}
+
+	&-Content-Table {
+		padding: 2.5rem 2rem 1rem 2rem;
+
+		h1 {
+			font-size: 2.5rem;
+			padding-bottom: 1rem;
+
+			span {
+				color: $primary-color;
+			}
+		}
+		.ListItem {
+			display: grid;
+			grid-template-columns: 15% 15% 35% 35%;
+			align-items: center;
+
+			h2 {
+				font-size: 1.5rem;
+			}
+			&:hover {
+				color: $primary-color;
+			}
+
+			&-Image {
+				img {
+					height: 64px;
+					width: 64px;
+				}
+			}
+
+			&-Data2 {
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.TopArtists {
+		&-Header {
+			padding: 1.5rem 0 0 0;
+			h1 {
+				font-size: 2rem;
+			}
+		}
+
+		&-Menu {
+			padding: 1rem;
+			ul {
+				display: block;
+
+				li {
+					font-size: 1rem;
+					padding-bottom: 0;
+
+					&:nth-of-type(2),
+					&:nth-of-type(3) {
+						padding-top: 0.5rem;
+					}
+				}
+			}
+
+			div {
+				padding: 0;
+
+				button {
+					padding: 0.5rem 2rem;
+				}
+			}
+		}
+
+		&-Content-Table {
+			h1 {
+				padding-bottom: 1rem;
+
+				span {
+					color: $primary-color;
+				}
+			}
+			.ListItem {
+				display: grid;
+				grid-template-columns: 1fr 1fr 5fr 3fr;
+				grid-gap: 0.4rem;
+				align-items: center;
+				justify-content: left;
+				text-align: left;
+
+				h2 {
+					font-size: 0.8rem;
+				}
+				h3 {
+					font-size: 0.75rem;
+				}
+
+				&:hover {
+					color: $info-color;
+				}
+
+				&-Image {
+					img {
+						height: 32px;
+						width: 32px;
+					}
+				}
+			}
+		}
+	}
+}

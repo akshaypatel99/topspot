@@ -1,0 +1,120 @@
+.container {
+	max-width: $website-width;
+	padding: 0 1.5rem;
+	margin: auto;
+	overflow: hidden;
+}
+
+// Buttons
+%btn-shared {
+	display: inline-block;
+	font-family: 'Proxima Nova Bold';
+	font-size: 1rem;
+	padding: 0.75rem 5rem;
+	border-radius: 99px;
+	transition: all 0.5s;
+	border: none;
+	cursor: pointer;
+}
+
+.btn {
+	&-primary {
+		@extend %btn-shared;
+		color: $dark-color;
+		background-color: $primary-color;
+	}
+	&-secondary {
+		@extend %btn-shared;
+		color: set-text-color($secondary-color);
+		background-color: $secondary-color;
+	}
+	&-tertiary {
+		@extend %btn-shared;
+		color: #fff;
+		background-color: $tertiary-color;
+	}
+	&-info {
+		@extend %btn-shared;
+		color: $dark-color;
+		background-color: $info-color;
+	}
+	&-warning {
+		@extend %btn-shared;
+		color: #fff;
+		background-color: $warning-color;
+	}
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover {
+	color: #fff;
+	background-color: $spotify-color;
+}
+
+.text-center {
+	text-align: center;
+}
+
+// Padding
+.py {
+	&-1 {
+		padding: 1rem 0;
+	}
+
+	&-2 {
+		padding: 2rem 0;
+	}
+
+	&-3 {
+		padding: 3rem 0;
+	}
+
+	&-4 {
+		padding: 4rem 0;
+	}
+}
+
+// Margin
+.my {
+	&-1 {
+		margin: 1rem 0;
+	}
+
+	&-2 {
+		margin: 2rem 0;
+	}
+
+	&-3 {
+		margin: 3rem 0;
+	}
+
+	&-4 {
+		margin: 4rem 0;
+	}
+}
+
+// Bottom Line
+.bottom-line {
+	height: 2px;
+	background: $medium-color;
+	display: block;
+	margin: 0 auto 1rem auto;
+
+	&-short {
+		height: 2px;
+		background: $medium-color;
+		display: block;
+		margin: 0 auto 0.5rem auto;
+		width: 5rem;
+
+		&:hover {
+			transition: 0.5s;
+			background: $primary-color;
+		}
+	}
+
+	&:hover {
+		transition: 0.5s;
+		background: $primary-color;
+	}
+}
