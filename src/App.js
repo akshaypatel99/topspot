@@ -12,6 +12,7 @@ import NavBar from './components/UI/NavBar';
 import Footer from './components/UI/Footer';
 import ScrollTopArrow from './components/UI/ScrollTopArrow';
 import { fetchUserData } from './util/user';
+import Help from './components/UI/Help';
 
 const App = () => {
 	const [{ token }, dispatch] = useStateValue();
@@ -52,6 +53,7 @@ const App = () => {
 						<Redirect to='/' exact component={Home} />
 					</Switch>
 					<ScrollTopArrow />
+					<Help />
 					<Footer />
 				</div>
 			</BrowserRouter>

@@ -47,7 +47,7 @@
 
 @media (max-width: 500px) {
 	.NavBar {
-		padding: 1rem 0;
+		padding: 0.5rem 0 !important;
 
 		svg.fa-spotify {
 			display: none;
