@@ -18,17 +18,6 @@ export const getAccessToken = () => {
 	const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
 	if (accessTokenMatch) {
 		accessToken = accessTokenMatch[1];
-		localStorage.setItem('accTkn', JSON.stringify(accessToken));
 	}
 	return accessToken;
-};
-
-export const checkLogin = (history) => {
-	const accessToken = localStorage.getItem('accTkn');
-
-	if (!accessToken) {
-		history.replace('/login');
-	}
-
-	return;
 };
