@@ -37,12 +37,12 @@ $arrow-size: 6px;
 		position: absolute;
 		pointer-events: none;
 		border-width: $arrow-size;
-		margin-left: calc($arrow-size * -1);
+		margin-left: calc(#{$arrow-size} * -1);
 	}
 
 	/* Absolute positioning */
 	.top {
-		top: calc($margin * -2);
+		top: calc(#{$margin} * -2);
 
 		/* CSS border triangles */
 		&::before {
@@ -52,12 +52,12 @@ $arrow-size: 6px;
 	}
 
 	.right {
-		left: calc(100% + $margin);
+		left: calc(100% + #{$margin});
 		top: 50%;
 		transform: translateX(0) translateY(-50%);
 
 		&::before {
-			left: calc($arrow-size * -1);
+			left: calc(#{$arrow-size} * -1);
 			top: 50%;
 			transform: translateX(0) translateY(-50%);
 			border-right-color: $background-color;
@@ -65,7 +65,7 @@ $arrow-size: 6px;
 	}
 
 	.bottom {
-		bottom: calc($margin * 3);
+		bottom: calc(#{$margin} * 3);
 
 		&::before {
 			bottom: 100%;
@@ -75,13 +75,13 @@ $arrow-size: 6px;
 
 	.left {
 		left: auto;
-		right: calc(100% + $margin);
+		right: calc(100% + #{$margin});
 		top: 50%;
 		transform: translateX(0) translateY(-50%);
 
 		::before {
 			left: auto;
-			right: calc($arrow-size * -2);
+			right: calc(#{$arrow-size} * -2);
 			top: 50%;
 			transform: translateX(0) translateY(-50%);
 			border-left-color: $background-color;
