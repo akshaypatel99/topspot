@@ -1,6 +1,6 @@
 const authEndPoint = 'https://accounts.spotify.com/authorize';
 const clientId = '8b4aa42a221243639e4ca355ddc45ffd';
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'https://topspot-app.herokuapp.com/';
 const response_type = ['token', 'code'];
 const scopes = [
 	'user-top-read',
