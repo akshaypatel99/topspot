@@ -50,7 +50,6 @@ const App = () => {
 						<Route path='/topartists' component={TopArtists} />
 						<Route path='/toptracks' component={TopTracks} />
 						<Route path='/' exact component={Home} />
-						<Redirect to='/' exact component={Home} />
 					</Switch>
 					<ScrollTopArrow />
 					<Help />
