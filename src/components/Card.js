@@ -14,6 +14,30 @@ const Card = ({
 	genre1,
 	genre2,
 }) => {
+	let genres;
+	if (!genre1) {
+		genres = (
+			<div className='Card-Genres'>
+				<h4>Genres: </h4>
+				<div className='badge1'>
+					<span>No genres found</span>
+				</div>
+			</div>
+		);
+	} else {
+		genres = (
+			<div className='Card-Genres'>
+				<h4>Genres: </h4>
+				<div className='badge1'>
+					<span>{genre1 ? genre1 : 'No genre found'}</span>
+				</div>
+				<div className='badge2'>
+					<span>{genre2 ? genre2 : 'No genre found'}</span>
+				</div>
+			</div>
+		);
+	}
+
 	return (
 		<div className='Card'>
 			<div className='Card-Image'>
@@ -44,15 +68,7 @@ const Card = ({
 				<div className='Card-Popularity'>
 					<ProgressBar title='Popularity' width={popularity} />
 				</div>
-				<div className='Card-Genres'>
-					<h4>Genres: </h4>
-					<div className='badge1'>
-						<span>{genre1}</span>
-					</div>
-					<div className='badge2'>
-						<span>{genre2}</span>
-					</div>
-				</div>
+				{genres}
 				<div className='Card-Related'>
 					<RelatedArtists id={id} />
 				</div>

@@ -13,7 +13,7 @@ export const relatedArtists = async (artistId, token) => {
 			}
 		);
 		console.log(response.data);
-		const relArtists = response.data;
+		const relArtists = response.data.artists;
 		return relArtists;
 	} catch (error) {
 		console.log(error);

@@ -15,14 +15,14 @@ const Home = () => {
 	if (user) {
 		listened = (
 			<div>
-				<a href={user.external_urls.spotify} target='_blank' rel='noreferrer'>
-					<span>{user.display_name}</span>
+				<a href={user?.external_urls.spotify} target='_blank' rel='noreferrer'>
+					<span>{user?.display_name}</span>
 				</a>
 				<h1>Take a look back at your most listened to artists and tracks.</h1>
 			</div>
 		);
 
-		userImg = <img src={user.images[0].url} alt='Profile' />;
+		userImg = <img src={user?.images[0].url} alt='Profile' />;
 	}
 
 	return (

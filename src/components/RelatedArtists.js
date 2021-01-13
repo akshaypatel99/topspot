@@ -12,22 +12,20 @@ const RelatedArtists = ({ id }) => {
 		});
 	}, [token, dispatch, id]);
 
-	let related = null;
+	let related = <div>No related artists found.</div>;
 
-	if (relArtist) {
-		related = (
-			<div className='RelatedArtists'>
-				<h4>
-					Related Artists:{' '}
-					<span>
-						{relArtist.artists[0].name}, {relArtist.artists[1].name},{' '}
-						{relArtist.artists[2].name}
-					</span>
-				</h4>
-			</div>
-		);
+	if (relArtist && relArtist !== []) {
+		related = relArtist.slice(0, 2).map((artist, i) => {
+			return <div key={i}>{artist.name}</div>;
+		});
 	}
-	return related;
+
+	return (
+		<div className='RelatedArtists'>
+			<h4>Related Artists:</h4>
+			<span>{related}</span>
+		</div>
+	);
 };
 
 export default RelatedArtists;
